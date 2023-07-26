@@ -1,3 +1,5 @@
+from utils.file import get_input_file_string
+
 def calorie_counting_part_one(input_data):
     elves = input_data.strip().split("\n\n")  # Split input into groups of Calorie values for each Elf
 
@@ -48,14 +50,10 @@ def calorie_counting_part_two(input_data):
     return top_three_calories_total
 
 def main():
-    with open("problems/day1/input.txt", "r") as file:
-        input_data = file.read()
+    input_data = get_input_file_string(1)
 
     id, result = calorie_counting_part_one(input_data)
     result1 = calorie_counting_part_two(input_data)
 
     print(f"[1] Max calories owner is elf number {id} with {result} calories")
     print(f"[2] The sum of calories carried by the top 3 elves: {result1}")
-
-
-main()

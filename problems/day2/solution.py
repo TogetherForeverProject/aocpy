@@ -1,3 +1,5 @@
+from utils.file import get_input_file_data
+
 def rock_paper_scissors_part_one(file_path):
     mapping = {
         'A': {
@@ -104,12 +106,9 @@ def rock_paper_scissors_part_two(input_data):
 
 
 def main():
-    with open("problems/day2/input.txt", "r") as file:
-        input_data = file.readlines()
+    input_data = get_input_file_data(2)
 
     result = rock_paper_scissors_part_one(input_data)
     result1 = rock_paper_scissors_part_two(input_data)
     print(f"[1] Total score with strategy 1: {result}")
     print(f"[2] Total score with strategy 2: {result1}")
-
-main()

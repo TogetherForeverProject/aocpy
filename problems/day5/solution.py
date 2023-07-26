@@ -1,5 +1,7 @@
+from utils.file import get_input_file_data
 from io import TextIOWrapper
 import re
+
 move_regex = re.compile('move (\d+) from (\d+) to (\d+)')
 
 class Instruction:
@@ -98,8 +100,7 @@ def get_stacks_configuration():
     return stacks
 
 
-if __name__ == '__main__':
-    with open('problems/day5/input.txt', 'r') as file:
-        input_data = file.readlines()
+def main():
+    input_data = get_input_file_data(5)
     supply_stacks_part_one(input_data)
     supply_stacks_part_two(input_data)

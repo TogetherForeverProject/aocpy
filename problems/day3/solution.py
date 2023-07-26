@@ -1,3 +1,5 @@
+from utils.file import get_input_file_data
+
 def rucksacks_reorganization_part_one(input_data):
     rucksacks = []
     for line in input_data:
@@ -60,12 +62,9 @@ def item_to_priority(item):
             return item - a + 1
 
 
-if __name__ == "__main__":
-    with open("problems/day3/input.txt", "r") as file:
-        input_data = file.readlines()
-
-
+def main():
+    input_data = get_input_file_data(3)
     result = rucksacks_reorganization_part_one(input_data)
     result1 = rucksacks_reorganization_part_two(input_data)
     print(f"[1] Sum of the priorities of item type that appears in both compartments of each rucksack:", result)
-    print(f"[2] Sum of the priorities of item type that corresponds to the badges of each three-Elf group:", result)
+    print(f"[2] Sum of the priorities of item type that corresponds to the badges of each three-Elf group:", result1)

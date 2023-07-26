@@ -1,3 +1,5 @@
+from utils.file import get_input_file_data
+
 class Section:
     def __init__(self, start, end):
         self.start = start
@@ -32,9 +34,8 @@ def section_overlaps_the_other(first: Section, second: Section) -> bool:
            second.start <= first.start <= second.end <= first.end or \
            section_contains_the_other(first, second)
 
-if __name__ == '__main__':
-    with open('problems/day4/input.txt', 'r') as file:
-        input_data = file.readlines()
+def main():
+    input_data = get_input_file_data(4)
     result1, result2 = camp_cleanup(input_data)
     print(f"[1] Number of ranges which fully contain the other: {result1}")
     print(f"[2] Number of ranges intersections: {result2}")
