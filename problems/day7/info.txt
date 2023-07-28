@@ -1,0 +1,2 @@
+Title: No Space Left On Device
+Link: https://adventofcode.com/2022/day/7

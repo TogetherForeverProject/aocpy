@@ -1,4 +1,6 @@
-from utils.file import get_input_file_data
+from utils import advent
+
+advent.setup(3)
 
 def rucksacks_reorganization_part_one(input_data):
     rucksacks = []
@@ -63,8 +65,8 @@ def item_to_priority(item):
 
 
 def main():
-    input_data = get_input_file_data(3)
+    input_data = advent.get_input()
     result = rucksacks_reorganization_part_one(input_data)
     result1 = rucksacks_reorganization_part_two(input_data)
-    print(f"[1] Sum of the priorities of item type that appears in both compartments of each rucksack:", result)
-    print(f"[2] Sum of the priorities of item type that corresponds to the badges of each three-Elf group:", result1)
+    advent.print_answer(1, f"Sum of the priorities of item type that appears in both compartments of each rucksack: {result}")
+    advent.print_answer(2, f"Sum of the priorities of item type that corresponds to the badges of each three-Elf group: {result1}")

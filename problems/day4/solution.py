@@ -1,4 +1,6 @@
-from utils.file import get_input_file_data
+from utils import advent
+
+advent.setup(4)
 
 class Section:
     def __init__(self, start, end):
@@ -35,7 +37,7 @@ def section_overlaps_the_other(first: Section, second: Section) -> bool:
            section_contains_the_other(first, second)
 
 def main():
-    input_data = get_input_file_data(4)
+    input_data = advent.get_input()
     result1, result2 = camp_cleanup(input_data)
     print(f"[1] Number of ranges which fully contain the other: {result1}")
     print(f"[2] Number of ranges intersections: {result2}")

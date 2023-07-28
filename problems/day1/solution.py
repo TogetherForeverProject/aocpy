@@ -1,7 +1,9 @@
-from utils.file import get_input_file_string
+from utils import advent
 
-def calorie_counting_part_one(input_data):
-    elves = input_data.strip().split("\n\n")  # Split input into groups of Calorie values for each Elf
+advent.setup(1)
+
+def calorie_counting_part_one(lines):
+    elves = "".join(lines).strip().split("\n\n")  # Split input into groups of Calorie values for each Elf
 
     max_calories = 0
     max_calories_elf_id = None  # Initialize the variable to store the ID of the elf with maximum calories
@@ -17,10 +19,7 @@ def calorie_counting_part_one(input_data):
     return max_calories_elf_id, max_calories
 
 
-def calorie_counting_part_two(input_data):
-    # Split the input_data into lines
-    lines = input_data.strip().split("\n")
-
+def calorie_counting_part_two(lines):
     # Create a list to store the total calories of each Elf
     elves_calories = []
 
@@ -50,10 +49,10 @@ def calorie_counting_part_two(input_data):
     return top_three_calories_total
 
 def main():
-    input_data = get_input_file_string(1)
+    input_data = advent.get_input()
 
     id, result = calorie_counting_part_one(input_data)
     result1 = calorie_counting_part_two(input_data)
 
-    print(f"[1] Max calories owner is elf number {id} with {result} calories")
-    print(f"[2] The sum of calories carried by the top 3 elves: {result1}")
+    advent.print_answer(1, f"Max calories owner is elf number {id} with {result} calories")
+    advent.print_answer(2, f"The sum of calories carried by the top 3 elves: {result1}")

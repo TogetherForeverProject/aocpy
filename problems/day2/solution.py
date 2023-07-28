@@ -1,4 +1,6 @@
-from utils.file import get_input_file_data
+from utils import advent
+
+advent.setup(2)
 
 def rock_paper_scissors_part_one(file_path):
     mapping = {
@@ -106,7 +108,7 @@ def rock_paper_scissors_part_two(input_data):
 
 
 def main():
-    input_data = get_input_file_data(2)
+    input_data = advent.get_input()
 
     result = rock_paper_scissors_part_one(input_data)
     result1 = rock_paper_scissors_part_two(input_data)

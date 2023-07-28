@@ -1,6 +1,8 @@
-from utils.file import get_input_file_data
+from utils import advent
 from io import TextIOWrapper
 import re
+
+advent.setup(5)
 
 move_regex = re.compile('move (\d+) from (\d+) to (\d+)')
 
@@ -101,6 +103,6 @@ def get_stacks_configuration():
 
 
 def main():
-    input_data = get_input_file_data(5)
+    input_data = advent.get_input()
     supply_stacks_part_one(input_data)
     supply_stacks_part_two(input_data)

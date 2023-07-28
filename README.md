@@ -20,3 +20,5 @@ puzzles), and `info.txt`(Extra).
 |3|[Rucksack Reorganization](https://adventofcode.com/2022/day/3)|[Day 3](./problems/day3/solution.py)|
 |4|[Camp Cleanup](https://adventofcode.com/2022/day/4)|[Day 4](./problems/day4/solution.py)|
 |5|[Supply Stacks](https://adventofcode.com/2022/day/5)|[Day 5](./problems/day5/solution.py)|
+|6|[Tuning Trouble](https://adventofcode.com/2022/day/6)|[Day 6](./problems/day6/solution.py)|
+|7|[No Space Left On Device](https://adventofcode.com/2022/day/7)|[Day 7](./problems/day7/solution.py)|
